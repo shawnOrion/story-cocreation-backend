@@ -9,7 +9,6 @@ public class ReadingLevelView : MonoBehaviour
     public Button secondGradeButton;
     public Button thirdGradeButton;
 
-    // Define an event for reading level selection
     public static event Action<string> ReadingLevelSelected;
 
     private void Start()

@@ -12,7 +12,6 @@ public class MessageView : MonoBehaviour
     public Button sendButton;
     public GameObject messagePrefab;
 
-    // Events
     public static event System.Action<string> CreateMessage;
     
     void OnEnable()

@@ -34,7 +34,6 @@ public class MessageController : MonoBehaviour
         StartCoroutine(messageService.CreateChatbotMessageRequest(storyId, OnChatbotMessageReceived, OnErrorReceived));
     }
 
-    // Adjusted to emit event after processing the message
     public void OnUserMessageReceived(Message message)
     {
         storyController.activeStory.messages.Add(message._id);
@@ -43,7 +42,6 @@ public class MessageController : MonoBehaviour
         CreateChatbotMessage(storyController.activeStory._id);
     }
 
-    // Adjusted to emit event after processing the message and chat over status
     public void OnChatbotMessageReceived(Message message, bool chatOver)
     {
         storyController.activeStory.messages.Add(message._id);
